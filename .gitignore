@@ -1,2 +1,12 @@
 .vscode/
 panda/
+__pycache__/
+config.py
+data.csv
+nawab.csv
+nawab_bot.py
+nawab_errors.log
+nawab_results.log
+requirements.txt
+tg_config.py
+
