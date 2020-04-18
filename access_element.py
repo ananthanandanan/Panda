@@ -23,5 +23,5 @@ search_list = []
 for index, row in data.iterrows(): 
     search_list.append(row["Proto_list"])
     
-print(search_list)
+return (search_list)
     
