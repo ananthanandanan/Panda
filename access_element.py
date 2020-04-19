@@ -19,9 +19,14 @@ with open('nawab.csv', 'a') as f:
     append=csv.writer(f)
     append.writerow(name)
 print("success")""" 
-search_list = []
-for index, row in data.iterrows(): 
-    search_list.append(row["Proto_list"])
+
+ac = "#netsec"
+
+
+if not any(acc["Proto_list"] == ac for index, acc in data.iterrows()):
+    print(True)
     
-return (search_list)
+else:
+     print(False)
+        
     
