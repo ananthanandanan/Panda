@@ -9,4 +9,6 @@ nawab_errors.log
 nawab_results.log
 requirements.txt
 tg_config.py
+argparse_eg.py
+.directory
 
