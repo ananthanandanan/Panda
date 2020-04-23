@@ -8,3 +8,5 @@ lst = ['Geeks', 'For', 'Geeks', 'is',
 # Calling DataFrame constructor on list
 df = pd.DataFrame(lst)
 print(df)
+
+/home/ananthan2k/Desktop/panda/logs
