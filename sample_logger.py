@@ -1,40 +1,27 @@
 import argparse
 import os 
+import pwd
+import logging
+import logging.handlers
 
 
 
 
 
-
-
-
-def writn(filename,texts):
-    print("writing to {}".format(filename))
-    
-    fp =  open(filename,'w')
-    
-    fp.write(texts)
     
 def main():
     
     # default directory
-    ##def_dir = 'var/log'
-    """if not os.path.exists(def_dir):
-        os.makedirs(def_dir)
-        os.chdir(def_dir)"""
-    
-    
+    default_dir = '/var/tmp/'
     # initialise the parser
-    parser = argparse.ArgumentParser(
-        description="Writing to text file"
-    )
+    """parser = argparse.ArgumentParser(description="Writing to text file")
     
     # add arguments
     parser.add_argument('file',type=str, 
                          help="file to store the text")
     parser.add_argument('text',type=str, 
                          help="the text to be written in file")
-    parser.add_argument('--path', action='store', default='/var/log'
+    parser.add_argument('--path', type=str
                         , help= 'paste path to desired directory')
     
    # parser.add_argument('-path', type=dir_path)
@@ -42,14 +29,27 @@ def main():
     
     args = vars(parser.parse_args())
     ## To check if new_path is passed
-    path = args['path']
-    if not os.path.exists(path):
-        os.makedirs(path)
-        os.chdir(path)
-    os.chdir(path)
+    
+    if(args['path']):
+        default_dir = args['path']"""
     
 
-    writn(args['file'], args['text'])
+    if not os.path.exists(default_dir):
+        os.system(("mkdir %s" % (default_dir)))
+
+
+    logger = logging.getLogger('myapp')
+    hdlr = logging.FileHandler(default_dir + 'myapp.log')
+    formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
+    hdlr.setFormatter(formatter)
+    logger.addHandler(hdlr) 
+    logger.setLevel(logging.WARNING)
+   
+    logger.error('We have a problem')
+    logger.info('While this is just chatty')
+   
+
+    
 
 if __name__ == "__main__":
     
