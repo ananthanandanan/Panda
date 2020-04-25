@@ -31,4 +31,3 @@ def nawab_check_tweet(tweet_id):
             return True
     return False
 ```
-- Here when the check_tweet()  is called, it will iterate through and check if the tweet_id is a stored tweet or not.
