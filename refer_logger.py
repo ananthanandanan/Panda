@@ -2,8 +2,8 @@
 import logging
 import os
 import logging.handlers
-LOG_FILE_ONE = "/var/tmp/"
-LOG_FILE_TWO = "/var/log/"
+LOG_FILE_ONE = "/var/log/nawab"
+
 
 
 class Nawab_Logging(object):
@@ -43,7 +43,7 @@ class Nawab_Logging(object):
         pass
   
 def main():
-    default_path = "/var/tmp/"
+    default_path = "/var/log/nawab/"
     Logger = Nawab_Logging(default_path)  
     Logger.logger('Hello everyone', 'info', 'results')
     
