@@ -6,7 +6,7 @@ LOG_FILE_ONE = "/var/log/nawab"
 
 
 
-class Nawab_Logging(object):
+class Nawab_Logging:
     
     def __init__(self, dirpath):
        self.setup_logger('log_result', dirpath + "results.log")
