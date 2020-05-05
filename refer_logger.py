@@ -6,15 +6,15 @@ LOG_FILE_ONE = "/var/log/nawab"
 
 
 
-class Nawab_Logging:
+class Nawab_Logging(object):
     
-    def __init__(self, dirpath):
-       self.setup_logger('log_result', dirpath + "results.log")
-       self.setup_logger('log_error', dirpath + "error.log")
+    def __init__(self, dirpath, level):
+       self.setup_logger('log_result', dirpath + "results.log", level)
+       self.setup_logger('log_error', dirpath + "error.log", level)
         
     
      ##setting up the logger
-    def setup_logger(self, logger_name, log_file, level=logging.INFO):
+    def setup_logger(self, logger_name, log_file, level):
         log_setup = logging.getLogger(logger_name)
         formatter = logging.Formatter(
             '%(levelname)s: %(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
@@ -40,12 +40,15 @@ class Nawab_Logging:
             log.warning(msg)
         if level == 'error':
             log.error(msg)
+        if level == 'debug':
+            log.debug(msg)
         pass
   
 def main():
     default_path = "/var/log/nawab/"
-    Logger = Nawab_Logging(default_path)  
-    Logger.logger('Hello everyone', 'info', 'results')
+    level = 20
+    Logger = Nawab_Logging(default_path,level)  
+    Logger.logger('Hello', 'info', 'results')
     
 if __name__ == "__main__":
 

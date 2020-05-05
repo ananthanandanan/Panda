@@ -20,13 +20,14 @@ with open('nawab.csv', 'a') as f:
     append.writerow(name)
 print("success")""" 
 
-ac = "#netsec"
 
+## use thi s
 
-if not any(acc["Proto_list"] == ac for index, acc in data.iterrows()):
-    print(True)
-    
-else:
-     print(False)
+l = list(input().split())
+if l:
+    df3 = pd.DataFrame({'Blacklist': l})
+    concats = pd.concat([data,df3])
+    print(df3)
+    print(concats)
+    concats.to_csv('data.csv',index=False)
         
-    
