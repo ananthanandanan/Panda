@@ -7,7 +7,7 @@ import logging.handlers
 
 
 
-def hello(hi=False):
+def hello(hi=None):
     print(hi)
     
 def main():
@@ -41,5 +41,11 @@ if __name__ == "__main__":
     
     ##parser.add_argument('path', option = os.chdir(input("paste here path to biog.txt file:")), help= 'paste path to biog.txt file')
     
-    
+    """try:
+            last_id = self.nawab_get_id()
+        except FileNotFoundError as e:
+            self.nw_logger.logger(
+                '|No tweet id found, hence assuming no file created and therefore creating the new file ', 'error', 'Error')
+            f = open(self.dirpath + "tid_store.csv", "w+")
+            last_id = None"""
     

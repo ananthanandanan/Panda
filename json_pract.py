@@ -13,15 +13,15 @@ if not os.path.isfile('samples.csv'):
         Headers = ['Datetime', 'Id']
         writer = csv.writer(f)
         writer.writerow(Headers)
-        sample = pd.read_csv('samples.csv')
-sample = pd.read_csv('samples.csv')
+        
+
 dicts = { 'Datetime' : [time.strftime("%m/%d/%Y %I:%M:%S %p ")],
                 'Id': [str(3212232334)]}
     
 data = pd.DataFrame(dicts)
-concats = pd.concat([sample,data])
-concats.to_csv('samples.csv',index=False)
-print(concats)
+data.to_csv('samples.csv',mode='a',header=False, index=False)
+sample = pd.read_csv('samples.csv')
+print(sample)
 
 
 
