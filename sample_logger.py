@@ -7,8 +7,8 @@ import logging.handlers
 
 
 
-def hello(hi=None):
-    print(hi)
+def hello(Path,hi=None):
+    print(hi,Path)
     
 def main():
     
@@ -18,6 +18,8 @@ def main():
     parser = argparse.ArgumentParser(description="Writing to text file")
     
     # add arguments
+    parser.add_argument("-p", "--path", type=str, required=False,
+                        help="Path where the log files be stored. Note to create directory in that path beforehand.")
     parser.add_argument('-d', '--default', action="store_const", const=30)
    # parser.add_argument('-path', type=dir_path)
     #parse arg 
@@ -27,7 +29,7 @@ def main():
     ## To check if new_path is passed
     if args['default']:
         print(args['default'])
-    hello(args['retweet'])
+    hello(args['path'],args['retweet'])
     
 
     
@@ -38,8 +40,6 @@ def main():
 if __name__ == "__main__":
     
     main()
-    
-    ##parser.add_argument('path', option = os.chdir(input("paste here path to biog.txt file:")), help= 'paste path to biog.txt file')
     
     """try:
             last_id = self.nawab_get_id()

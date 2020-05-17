@@ -9,15 +9,15 @@ LOG_FILE_ONE = "/var/log/nawab"
 class Nawab_Logging(object):
     
     def __init__(self, dirpath, level):
-       self.setup_logger('log_result', dirpath + "results.log", level)
-       self.setup_logger('log_error', dirpath + "error.log", level)
+       self.setup_logger('log_result',"results.log", level)
+       self.setup_logger('log_error', "error.log", level)
         
     
      ##setting up the logger
     def setup_logger(self, logger_name, log_file, level):
         log_setup = logging.getLogger(logger_name)
-        formatter = logging.Formatter(
-            '%(levelname)s: %(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+        formatter = logging.Formatter(fmt=
+            '%(asctime)s %(msecs)d,%(lineno)d %(levelname)-4s %(message)s', datefmt='%Y-%m-%d %I:%M:%S %p')
         fileHandler = logging.FileHandler(log_file, mode='a')
         fileHandler.setFormatter(formatter)
         streamHandler = logging.StreamHandler()

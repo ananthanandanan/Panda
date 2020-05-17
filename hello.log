@@ -1,1 +1,30 @@
 this is debug
+INFO:05/17/2020 01:53:28 AM 	|new job grudge
+INFO:05/12/2020 10:57:44 PM 	|Nawab retweeted 1259857814832517132 successfully 
+INFO:05/17/2020 01:54:51 AM 	|new job grudge
+INFO:05/17/2020 01:55:25 AM 	|new job grudge
+INFO:05/17/2020 01:55:27 AM 	|new job grudge
+INFO:05/17/2020 01:55:31 AM 	|new job grudge
+INFO:05/17/2020 01:55:32 AM 	|new job grudge
+ERROR:05/17/2020 02:00:34 AM 	|Tweepy failed to retweet after reading from the store of id 1231343  because of something
+ERROR:05/17/2020 02:01:12 AM 	|Tweepy failed to retweet after reading from the store of id 1231343 because of something
+ERROR:05/17/2020 02:01:13 AM 	|Tweepy failed to retweet after reading from the store of id 1231343 because of something
+ERROR:05/17/2020 03:16:56 PM :Twitter_Bot|	|Tweepy failed to retweet after reading from the store of id 234344  because of something
+INFO:05/17/2020 03:22:11 PM :Twitter_Bot|	|Nawab retweeted 12334233454656 successfully 
+INFO:05/17/2020 03:22:23 PM :Twitter_Bot|	|Nawab retweeted 12334233454656 successfully 
+INFO:05/17/2020 03:22:24 PM :Twitter_Bot|	|Nawab retweeted 12334233454656 successfully 
+INFO:05/17/2020 03:22:24 PM :Twitter_Bot|	|Nawab retweeted 12334233454656 successfully 
+INFO:05/17/2020 03:22:39 PM :Twitter_Bot|	|Nawab retweeted 12334233454656 successfully 
+INFO:05/17/2020 08:55:35 %f :Twitter_Bot|	|Nawab retweeted 12334233454656 successfully 
+INFO:05/17/2020 08:56:%f :Twitter_Bot|	|Nawab retweeted 12334233454656 successfully 
+INFO:13 05/17/2020 10:06:%f :Twitter_Bot|	|Nawab retweeted 12334233454656 successfully 
+INFO:13 05/17/2020 10:06:%f :Twitter_Bot|	|Nawab retweeted 12334233454656 successfully 
+INFO:13 05/17/2020 10:06:%f :Twitter_Bot|	|Nawab retweeted 12334233454656 successfully 
+2020-05-17 10:14:49 PM,13ERROR Telegram_BotUpdatenothingcaused errorsomething
+2020-05-17 10:14:50 PM,13ERROR Telegram_BotUpdatenothingcaused errorsomething
+2020-05-17 10:16:56 PM,13 ERROR Telegram_Bot Update nothing caused error something 
+2020-05-17 10:16:56 PM,13 ERROR Telegram_Bot Update nothing caused error something 
+2020-05-17 10:16:57 PM,13 ERROR Telegram_Bot Update nothing caused error something 
+2020-05-18 12:36:40 AM,13 ERROR Twitter_Bot 12343454467 already exists in the database or it is a retweet
+2020-05-18 12:36:41 AM,13 ERROR Twitter_Bot 12343454467 already exists in the database or it is a retweet
+2020-05-18 12:36:41 AM,13 ERROR Twitter_Bot 12343454467 already exists in the database or it is a retweet
