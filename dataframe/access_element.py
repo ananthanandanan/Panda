@@ -1,6 +1,5 @@
 # importing pandas package
 import pandas as pd
-import config 
 import csv
  
 # making data frame from csv file also indexed column will be left most and search related
@@ -23,11 +22,8 @@ print("success")"""
 
 ## use thi s
 
-l = list(input().split())
-if l:
-    df3 = pd.DataFrame({'Blacklist': l})
-    concats = pd.concat([data,df3])
-    print(df3)
-    print(concats)
-    concats.to_csv('data.csv',index=False)
-        
+search_list = []
+for index, row in data.iterrows():
+    search_list.append(row["Proto_list"])
+print(search_list)
+

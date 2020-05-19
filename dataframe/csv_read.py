@@ -6,7 +6,6 @@ data = pd.read_csv("data.csv")
  
 # retrieving row by loc method
 
-last = data['Blacklist'].iloc[-1]
-
 for index, Proto_list in data.iterrows():
      print(Proto_list['Proto_list'])
+
