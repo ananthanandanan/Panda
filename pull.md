@@ -31,3 +31,5 @@ def nawab_check_tweet(tweet_id):
             return True
     return False
 ```
+
+[rules](https://telegra.ph/FMNC-Group-rules-05-22)

@@ -9,5 +9,5 @@ def line_numb():
 
 new_job = "grudge" 
 with open("hello.log", "a") as fp:
-    fp.write(time.strftime("%Y-%m-%d %I:%M:%S %p")+','+str(line_numb())+' ERROR ' +'Twitter_Bot ' +
-                                        str(12343454467)  + " already exists in the database or it is a retweet\n")
+    fp.write(time.strftime("%Y-%m-%d %I:%M:%S %p") + ',' + str(line_numb()) + ' INFO ' + 'Telegram_Bot '
+                            + 'starting bot' + '\n')

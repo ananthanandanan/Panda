@@ -4,7 +4,7 @@ import csv
 
 data = pd.read_csv('data.csv')
 
-text = " Hello DNSserver BGPri"
+text = "A newly discovered #DNS protocol vulnerability affecting ALL recursive DNS resolvers. It allows a random subdomain… https://t.co/ooAIhv wn1e"
 
 def nawab_read_list(data):
         search_list = []
@@ -23,7 +23,8 @@ def main():
     for line in query:
         key = str(line).strip('#')
         if key in text:
-            cnt+=1
+            
+            cnt+=text.count(key)
     print(cnt)
         
 if __name__ == "__main__":
